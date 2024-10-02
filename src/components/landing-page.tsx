@@ -55,7 +55,7 @@ export function LandingPageComponent() {
           transition={{type: 'spring', stiffness: 100, delay: 0.5}}
         >
           {/* <span className="inline-block transform hover:rotate-12 transition-transform duration-300">🍴</span>{' '} */}
-          forkme
+          fourchemoi
         </motion.h1>
       </WobbleBox>
 
@@ -183,12 +183,12 @@ export function LandingPageComponent() {
           <p className="text-xl text-[#4a148c] mb-8">
             Or take a look at{' '}
             <a
-              href="https://github.com/mmkal/hypescript"
+              href="https://github.com/etdr/hypescript"
               target="_blank"
               rel="noopener noreferrer"
               className="text-[#3949ab] hover:underline"
             >
-              mmkal/hypescript
+              etdr/hypescript
             </a>{' '}
             - a Series-B-funded* SaaS fork of TypeScript
           </p>
@@ -228,7 +228,7 @@ export function LandingPageComponent() {
                 Netflix: 'netflix/chaosmonkey',
                 Uber: 'uber/RIBs',
                 WordPress: 'WordPress/wordpress-develop',
-                Forkme: 'mmkal/forkme',
+                Forkme: 'etdr/fourchemoi',
               } as Record<string, string>
               const repo = repoMap[company]
               const params = {
@@ -250,7 +250,7 @@ export function LandingPageComponent() {
                     <Link href={`/fork?${new URLSearchParams(params)}`}>
                       <Image
                         src={`/logos/forkable/${company.toLowerCase()}.svg`.replace(
-                          '/logos/forkable/forkme.svg',
+                          '/logos/forkable/fourchemoi.svg',
                           '/logos/nobg.png',
                         )}
                         alt={`${company} logo`}
@@ -275,7 +275,7 @@ export function LandingPageComponent() {
         <br />
         <div className="flex justify-center items-center space-x-4">
           <a
-            href="https://x.com/mmkalmmkal"
+            href="https://x.com/etdretdr"
             target="_blank"
             rel="noopener noreferrer"
             className="text-[#3949ab] hover:underline flex items-center"
@@ -283,7 +283,7 @@ export function LandingPageComponent() {
             <Image src="/logos/forkable/x-black.png" alt="X" width={20} height={20} />
           </a>
           <a
-            href="https://github.com/mmkal/forkme"
+            href="https://github.com/etdr/fourchemoi"
             target="_blank"
             rel="noopener noreferrer"
             className="text-[#3949ab] hover:underline flex items-center"

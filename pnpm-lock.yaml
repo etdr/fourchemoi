@@ -79,7 +79,7 @@ devDependencies:
   eslint:
     specifier: ^8.57.1
     version: 8.57.1
-  eslint-plugin-mmkal:
+  eslint-plugin-etdr:
     specifier: ^0.10.1
     version: 0.10.1(eslint@8.57.1)(typescript@5.6.2)
   postcss:
@@ -2705,7 +2705,7 @@ packages:
       - supports-color
     dev: true
 
-  /eslint-plugin-mmkal@0.10.1(eslint@8.57.1)(typescript@5.6.2):
+  /eslint-plugin-etdr@0.10.1(eslint@8.57.1)(typescript@5.6.2):
     resolution: {integrity: sha512-xK83/rvnwmoVAe+H2IBZbAZJ85VNvn16uI8ODle68XIfvIdYpkx0hNx/cp2La/Lv1uFIUvhOEHAbxXoRVSwryQ==}
     engines: {node: '>=18'}
     dependencies:

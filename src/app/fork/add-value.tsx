@@ -20,12 +20,12 @@ export const addValue: Parameters<typeof GitHubFork>[0]['addValue'] = async ({
     ref: 'heads/' + upstreamRepo.default_branch,
   })
 
-  const forkmeBranch = 'forkme'
+  const fourchemoiBranch = 'fourchemoi'
   const branchExists = await octokit.git
     .getRef({
       owner: codebase.owner,
       repo: codebase.repo,
-      ref: `heads/${forkmeBranch}`,
+      ref: `heads/${fourchemoiBranch}`,
     })
     .then(() => true)
     .catch(() => false)
@@ -37,7 +37,7 @@ export const addValue: Parameters<typeof GitHubFork>[0]['addValue'] = async ({
     const updateResponse = await octokit.git.updateRef({
       owner: codebase.owner,
       repo: codebase.repo,
-      ref: `heads/${forkmeBranch}`,
+      ref: `heads/${fourchemoiBranch}`,
       sha: upstreamDefaultBranchRef.object.sha,
       force: true,
     })
@@ -49,7 +49,7 @@ export const addValue: Parameters<typeof GitHubFork>[0]['addValue'] = async ({
     const createResponse = await octokit.git.createRef({
       owner: codebase.owner,
       repo: codebase.repo,
-      ref: `refs/heads/${forkmeBranch}`,
+      ref: `refs/heads/${fourchemoiBranch}`,
       sha: upstreamDefaultBranchRef.object.sha,
     })
     refData = createResponse.data
@@ -62,8 +62,8 @@ export const addValue: Parameters<typeof GitHubFork>[0]['addValue'] = async ({
 
   const messages = [
     requestedForkName !== codebase.repo && `Renaming repository to ${requestedForkName}`,
-    upstreamDefaultBranchRef.ref !== `heads/${forkmeBranch}` &&
-      `Updating to source repo default branch to ${forkmeBranch}`,
+    upstreamDefaultBranchRef.ref !== `heads/${fourchemoiBranch}` &&
+      `Updating to source repo default branch to ${fourchemoiBranch}`,
   ]
   if (messages.some(Boolean)) {
     toast(`Updating repository metadata`, {description: messages.filter(Boolean).join('\n\n')})
@@ -82,7 +82,7 @@ export const addValue: Parameters<typeof GitHubFork>[0]['addValue'] = async ({
     await octokit.repos.update({
       owner: codebase.owner,
       repo: codebase.repo,
-      default_branch: forkmeBranch,
+      default_branch: fourchemoiBranch,
       name: requestedForkName,
       description: improvedDescription,
       homepage: improvedHomepage,
@@ -148,7 +148,7 @@ export const addValue: Parameters<typeof GitHubFork>[0]['addValue'] = async ({
     const commitInput: CreateCommitOnBranchInput = {
       branch: {
         repositoryNameWithOwner: `${codebase.owner}/${codebase.repo}`,
-        branchName: forkmeBranch, // Use the new branch name
+        branchName: fourchemoiBranch, // Use the new branch name
       },
       message: {
         headline: `Add ${$$$} of value`,

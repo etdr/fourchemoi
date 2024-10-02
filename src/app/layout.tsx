@@ -14,16 +14,16 @@ const mainFont = MainFont({
 })
 
 export const metadata: Metadata = {
-  title: 'forkme ⑂',
+  title: 'fourchemoi ⑂',
   description: 'Fork yourself and get funded faster',
   openGraph: {
-    title: 'forkme ⑂',
+    title: 'fourchemoi ⑂',
     description: 'Fork yourself and get funded faster',
     images: ['/logos/logo.webp'], // Add your Open Graph image path here
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'forkme ⑂',
+    title: 'fourchemoi ⑂',
     description: 'Fork yourself and get funded faster',
     images: ['/logos/logo.webp'], // Add your Twitter card image path here
   },
@@ -43,7 +43,7 @@ export default async function RootLayout({children}: {children: React.ReactNode}
       {/* <Suspense>
         <PostHogPageview />
       </Suspense> */}
-      <body className="forkmeBody bg-[#f0ebe0]">
+      <body className="fourchemoiBody bg-[#f0ebe0]">
         <MotionConfig reducedMotion="user">
           {/* <Header /> */}
           <main className="">{children}</main>
